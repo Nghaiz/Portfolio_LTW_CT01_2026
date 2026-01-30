@@ -1,107 +1,114 @@
 <!doctype html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nghaiz</title>
-    <link rel="stylesheet" href="/src/style.css">
+    <title>Nghaiz - Portfolio</title>
     <link rel="shortcut icon" href="/src/picture/LTA1.jpg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1b2347',
+                        accent: '#ff6fbd',
+                        secondary: '#7c82ca',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                        'slide-up': 'slideUp 0.6s ease-out forwards',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(50px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 20px rgba(255, 111, 189, 0.3)' },
+                            '100%': { boxShadow: '0 0 40px rgba(255, 111, 189, 0.6)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="/src/style.css">
 </head>
-<body>
-<div class="cherry-blossom-container"></div>
-<div class="overlay"></div>
+<body class="font-poppins bg-primary text-white min-h-screen">
+    <div class="fixed inset-0 bg-cover bg-center bg-fixed -z-10" style="background-image: url('/src/picture/background.jpg');"></div>
+    <div class="fixed inset-0 bg-primary/60 backdrop-blur-sm -z-10"></div>
 
-<header>
-    <h2 class="logo">NghaizBlog</h2>
-    <div class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    <nav class="navigation">
-        <a href="/" data-navigo>Home</a>
-        <a href="#">Explore</a>
-        <a href="#">About us</a>
-        <a href="#">Donate</a>
-        <button class="btn-popUp">Login</button>
-    </nav>
-</header>
+    <header class="fixed top-0 left-0 w-full px-[5%] py-5 flex justify-between items-center z-50 backdrop-blur-md bg-primary/40 shadow-lg transition-all duration-300">
+        <h2 class="text-2xl md:text-3xl font-bold text-white drop-shadow-lg cursor-pointer">
+            <a href="/" data-navigo class="hover:text-accent transition-colors">Nghaiz</a>
+        </h2>
 
-<div id="app-content"></div>
+        <div class="menu-toggle md:hidden flex flex-col justify-between w-7 h-5 cursor-pointer z-50">
+            <span class="block h-[3px] w-full bg-white rounded transition-all duration-300"></span>
+            <span class="block h-[3px] w-full bg-white rounded transition-all duration-300"></span>
+            <span class="block h-[3px] w-full bg-white rounded transition-all duration-300"></span>
+        </div>
+        
+        <nav class="navigation hidden md:flex items-center gap-8">
+            <a href="/" data-navigo class="nav-link relative text-lg font-medium hover:text-accent transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[3px] after:bg-accent after:rounded after:scale-x-0 after:origin-right after:transition-transform after:duration-500 hover:after:scale-x-100 hover:after:origin-left">Home</a>
+            <a href="/about" data-navigo class="nav-link relative text-lg font-medium hover:text-accent transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[3px] after:bg-accent after:rounded after:scale-x-0 after:origin-right after:transition-transform after:duration-500 hover:after:scale-x-100 hover:after:origin-left">About</a>
+            <a href="/skills" data-navigo class="nav-link relative text-lg font-medium hover:text-accent transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[3px] after:bg-accent after:rounded after:scale-x-0 after:origin-right after:transition-transform after:duration-500 hover:after:scale-x-100 hover:after:origin-left">Skills</a>
+            <a href="/projects" data-navigo class="nav-link relative text-lg font-medium hover:text-accent transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[3px] after:bg-accent after:rounded after:scale-x-0 after:origin-right after:transition-transform after:duration-500 hover:after:scale-x-100 hover:after:origin-left">Projects</a>
+            <a href="/contact" data-navigo class="px-6 py-2 border-2 border-accent rounded-lg font-medium hover:bg-accent hover:text-primary transition-all duration-300 hover:shadow-[0_0_15px_rgba(255,111,189,0.5)]">Contact</a>
+        </nav>
+    </header>
 
-<div class="wrapper">
-    <span class="icon-close">
-        <ion-icon name="close"></ion-icon>
-    </span>
-
-    <div class="form-box login">
-        <h2>Login</h2>
-        <form id="login-form">
-            <div class="input-box">
-                <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                <input type="email" id="login-email" required placeholder=" ">
-                <label>Email</label>
-            </div>
-            <div class="input-box">
-                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                <input type="password" id="login-password" required placeholder=" ">
-                <label>Password</label>
-            </div>
-            <div class="error-message" id="login-error"></div>
-            <div class="remember">
-                <label><input type="checkbox">Remember me</label>
-                <a href="#">Forgot Password?</a>
-            </div>
-            <button type="submit" class="btn-form">
-                <span>Login</span>
-                <div class="success-animation">
-                    <ion-icon name="checkmark-circle"></ion-icon>
-                </div>
-            </button>
-            <div class="login-register">
-                <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
-            </div>
-        </form>
+    <div class="mobile-nav-overlay fixed inset-0 bg-primary/95 backdrop-blur-lg z-40 hidden opacity-0 transition-opacity duration-300">
+        <nav class="flex flex-col items-center justify-center h-full gap-8">
+            <a href="/" data-navigo class="text-2xl font-semibold hover:text-accent transition-colors">Home</a>
+            <a href="/about" data-navigo class="text-2xl font-semibold hover:text-accent transition-colors">About</a>
+            <a href="/skills" data-navigo class="text-2xl font-semibold hover:text-accent transition-colors">Skills</a>
+            <a href="/projects" data-navigo class="text-2xl font-semibold hover:text-accent transition-colors">Projects</a>
+            <a href="/contact" data-navigo class="text-2xl font-semibold px-8 py-3 border-2 border-accent rounded-lg hover:bg-accent hover:text-primary transition-all">Contact</a>
+        </nav>
     </div>
 
-    <div class="form-box register">
-        <h2>Registration</h2>
-        <form id="register-form">
-            <div class="input-box">
-                <span class="icon"><ion-icon name="person"></ion-icon></span>
-                <input type="text" id="register-username" required placeholder=" ">
-                <label>Username</label>
-            </div>
-            <div class="input-box">
-                <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                <input type="email" id="register-email" required placeholder=" ">
-                <label>Email</label>
-            </div>
-            <div class="input-box">
-                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                <input type="password" id="register-password" required placeholder=" ">
-                <label>Password</label>
-            </div>
-            <div class="error-message" id="register-error"></div>
-            <div class="remember">
-                <label><input type="checkbox" required>I agree to the terms and conditions</label>
-            </div>
-            <button type="submit" class="btn-form">
-                <span>Register</span>
-                <div class="success-animation">
-                    <ion-icon name="checkmark-circle"></ion-icon>
-                </div>
-            </button>
-            <div class="login-register">
-                <p>Already have an account? <a href="#" class="login-link">Login</a></p>
-            </div>
-        </form>
-    </div>
-</div>
+    <main id="app-content" class="pt-24 min-h-screen"></main>
 
-<script type="module" src="/src/main.js"></script>
+    <footer class="bg-primary/80 backdrop-blur-md py-8 mt-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="flex justify-center gap-6">
+                <a href="https://github.com/Nghaiz" target="_blank" class="text-2xl hover:text-accent transition-colors text-white/50 hover:text-white/80">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a href="#" class="text-2xl hover:text-accent transition-colors text-white/50 hover:text-white/80">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <a href="#" class="text-2xl hover:text-accent transition-colors text-white/50 hover:text-white/80">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a href="mailto:Nghiaa0.NTT@gmail.com" class="text-2xl hover:text-accent transition-colors text-white/50 hover:text-white/80">
+                    <ion-icon name="mail-outline"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
 </body>
 </html>
