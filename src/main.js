@@ -150,7 +150,7 @@ const renderHomePage = () => {
                     <!-- Image -->
                     <div class="relative">
                         <div class="aspect-square max-w-sm mx-auto rounded-2xl overflow-hidden border border-white/10">
-                            <img src="/src/picture/LTA1.jpg" alt="Nguyen Duy Nghia" class="w-full h-full object-cover">
+                            <img src="/picture/LTA1.jpg" alt="Nguyen Duy Nghia" class="w-full h-full object-cover">
                         </div>
                     </div>
                     
@@ -268,7 +268,7 @@ const renderAboutPage = () => {
                         <div class="bg-gradient-to-br from-white/[0.12] to-white/[0.05] backdrop-blur-md rounded-3xl p-8 border border-white/20 hover:border-white/30 transition-all animate-slide-up">
                             <div class="flex items-start gap-6">
                                 <div class="w-24 h-24 rounded-2xl overflow-hidden border-2 border-accent/50 flex-shrink-0 shadow-lg shadow-accent/20">
-                                    <img src="/src/picture/LTA1.jpg" alt="Profile" class="w-full h-full object-cover">
+                                    <img src="/picture/LTA1.jpg" alt="Profile" class="w-full h-full object-cover">
                                 </div>
                                 <div>
                                     <h2 class="text-2xl font-bold mb-1">Nguyen Duy Nghia</h2>
@@ -482,7 +482,7 @@ const renderProjectsPage = () => {
             title: 'Portfolio Website',
             description: 'Personal portfolio website with beautiful effects, modern design using Tailwind CSS and Navigo router for SPA routing.',
             tech: ['HTML5', 'TailwindCSS', 'JavaScript', 'Vite', 'Navigo'],
-            image: '/src/picture/background.jpg',
+            image: '/picture/background.jpg',
             github: 'https://github.com/Nghaiz',
             demo: 'https://nghaiz-blog.vercel.app/',
             featured: true
@@ -491,7 +491,7 @@ const renderProjectsPage = () => {
             title: 'Breakfast App Clone',
             description: 'Breakfast ordering app clone built with Flutter/Dart, featuring beautiful UI/UX design following Material Design guidelines.',
             tech: ['Flutter', 'Dart', 'Mobile'],
-            image: '/src/picture/background.jpg',
+            image: '/picture/background.jpg',
             github: 'https://github.com/Nghaiz/hw_clone_breakfast_app',
             demo: null,
             featured: true
@@ -500,7 +500,7 @@ const renderProjectsPage = () => {
             title: 'Todo List App',
             description: 'Task management application with add, delete, edit and mark as complete features. Data persistence with local storage.',
             tech: ['HTML', 'CSS', 'JavaScript', 'Vite'],
-            image: '/src/picture/background.jpg',
+            image: '/picture/background.jpg',
             github: 'https://github.com/Nghaiz',
             demo: 'https://todolist-eta-orpin.vercel.app/',
             featured: true
@@ -509,7 +509,7 @@ const renderProjectsPage = () => {
             title: 'YouTube Clone',
             description: 'YouTube interface clone built with Vite, using component-based architecture and client-side routing.',
             tech: ['HTML', 'CSS', 'JavaScript', 'Vite'],
-            image: '/src/picture/background.jpg',
+            image: '/picture/background.jpg',
             github: 'https://github.com/Nghaiz',
             demo: null,
             featured: false
@@ -518,7 +518,7 @@ const renderProjectsPage = () => {
             title: 'Spotify UI Clone',
             description: 'Spotify interface recreation with responsive design and smooth animations.',
             tech: ['HTML', 'CSS', 'JavaScript'],
-            image: '/src/picture/background.jpg',
+            image: '/picture/background.jpg',
             github: 'https://github.com/Nghaiz',
             demo: null,
             featured: false
@@ -527,7 +527,7 @@ const renderProjectsPage = () => {
             title: 'Calendar App',
             description: 'Calendar application with ability to view and manage events by day and month.',
             tech: ['HTML', 'CSS', 'JavaScript'],
-            image: '/src/picture/background.jpg',
+            image: '/picture/background.jpg',
             github: 'https://github.com/Nghaiz',
             demo: null,
             featured: false
